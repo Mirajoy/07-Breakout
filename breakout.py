@@ -267,13 +267,13 @@ class Block(pygame.sprite.Sprite):
 		screen.blit(self.image, (self.rect.x, self.rect.y))
 		
 
-screen_size = (1024,768)
-FPS = 60
+screen_size = (1024,700)
+FPS = 25
 points_position = (10,10)
 lives_position = (1000,10)
 display_color = (255,255,255)
 
-paddle_pos = (0,700)
+paddle_pos = (0,600)
 paddle_size = (80,15)
 paddle_color = (255,255,255)
 paddle_max_speed = 60
@@ -295,11 +295,14 @@ ball_max_speed = 30.0
 
 gravity = (math.pi,9.8)
 
-def main():
+def main():        
 	pygame.init()
 	font = pygame.font.SysFont("arial",30)
 	screen = pygame.display.set_mode(screen_size)
 	game = Game(font,display_color,points_position,lives_position)
+        # difficulty
+	textsurf = font.render("Welcome to the game! Break all the blocks to win!\n Would you like to play on easy (green button), moderate (yellow button), hard (red botton), or invisible mode (purple button)?", False, (255,255,255))
+	screen.blit(textsurf,(0,0)) 
 	clock = pygame.time.Clock()
 	lives = 5
 	points = 0
