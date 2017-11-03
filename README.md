@@ -33,3 +33,5 @@ The grading criteria will be as follows:
 * [2] Adds interesting features (beyond the scope of the assignment)
 
 20 points total
+
+I changed the screen size and paddle position so it would fit on my screen. I started to implement a difficulty system.
